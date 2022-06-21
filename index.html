@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <title> Tính Tempo Và Ô Nhịp </title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <script>
+        function tinhtempo() {
+            document.getElementById("b").setAttribute('value', 60 / ((Number(document.getElementById("a").value)) / Number(document.getElementById("c").value) / Number(document.getElementById("d").value)))
+    
+        }
+        function tinhonhip() {
+            document.getElementById("c").setAttribute('value', Number(document.getElementById("a").value) * Number(document.getElementById("b").value) / 60 / Number(document.getElementById("d").value))
+    
+        }
+        function clear(){
+            document.getElementById(
+             'a').value = '';
+        }
+    
+        
+    
+    </script>
+</head>
+<style>
+    .manhinh{
+     
+     height: 915px;
+     width: 100wh;
+  background-image: url("background.jpg");
+     scale: 100%;
+    }
+    .textarea {
+        color: black;
+    }
+
+    .tieude {
+        height: 100px;
+        width: 100%;
+      
+    }
+
+    .phanchinh {
+        height: 80%;
+        width: 100%;
+        text-align: center;
+    }
+
+    input {
+        width: 400px;
+        text-align: center;
+        margin-bottom: 20px;
+        height: 40px;
+        font-size: 35px;
+        border-radius: 10px;
+        border: none;
+        border-top: 0px;
+
+    }
+    span{
+        width: 400px;
+        text-align: center;
+        margin-bottom: 20px;
+        height: 40px;
+        font-size: 35px;
+        
+        
+    }
+     button{
+       height: 60px;
+       margin-top: 30px;
+        border-radius: 10px;
+        border: none;
+        border-top: 0px;
+        width: 300px;
+        font-size: 30px;
+        font-family:'Courier New', Courier, monospace
+    
+        
+  
+  
+ 
+    }
+    button:hover {
+  background-color: #008cff; /* Green */
+  color: white;
+  
+    }
+
+</style>
+    
+<body>
+    <div class="manhinh">
+    <div class="tieude">
+        
+    </div>
+    <div class="phanchinh">
+        <form id="form">
+        <input  id="a" value="a" type="number" min="1" placeholder="Nhập thời gian"><br>
+        <input id="b" value="b" type="number"  min="1" placeholder="Nhập tempo"><br>
+        <input id="c" value="c"  type="number"  min="1" placeholder="Nhập số ô nhịp"><br>
+        
+    </form>
+    <form style="margin-top: 40px;">
+        <span style="margin: 10px;font-size: 30px;color: black;font-weight: bold;margin-left: 40px;"> Số nhịp </span>
+        <select id="d" style="height: 60px;width: 100px;font-size: 35px;" >
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+           
+            
+        </select>
+        <span style="color: black;font-weight: bold;font-size: 50px;margin-left: 40px;">/4</span>
+    </form>
+        <br>
+        <br>
+        <br>
+    
+
+        <button onclick="tinhtempo()" > Tính tempo </button><br>
+        <button onclick="tinhonhip()" >Tính số ô nhịp</button><br>
+        
+        
+         
+             <button onclick="location.reload()">
+                Clear
+            </button>
+         
+    </div>
+    <span style="margin-left: 170px;font-size: 20px;font-weight: bold;color: rgb(0, 0, 0);">
+        Author: Ngo Hoang Huy
+        
+    </span><br>
+    <span style="margin-left: 170px;font-size: 20px;font-weight: bold;color: rgb(0, 0, 0)">Design: Huynh Aquarius</span>
+</body>
+
+
+</div>
+<footer>
+    
+</footer>
+</html>
